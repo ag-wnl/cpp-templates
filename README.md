@@ -1,2 +1,2 @@
 # cpp-templates
-templates i use for competitive programming
+Collection of templates that i use for competitive programming
