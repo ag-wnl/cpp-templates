@@ -22,3 +22,25 @@ long long cnk( long long n, long long k )
     }
     return ret;
 }
+
+
+// for nCr without MOD given, change long double to ll if no precision need:
+long double ncr(ll n, ll  r) {
+    int i;
+    long double p=1.0, q=1.0, ans=1.0;
+    if(r > n) {
+        return 0.0;
+    }
+
+    if(r == n) {
+        return 1.0;
+    }
+
+    for(i=0; i<r; i++) {
+        p = n-i;
+        q = i+1;
+        ans*=(p/q);
+    }
+
+    return ans;
+}
