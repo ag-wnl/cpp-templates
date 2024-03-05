@@ -1,8 +1,5 @@
 ll mod = 1e9 + 7;
- 
-string gud;
-vector<ll> gudPref(1e5);
- 
+  
 long long pwr( long long a, int pw )
 {
     long long ret = 1;
@@ -17,8 +14,6 @@ long long pwr( long long a, int pw )
 long long mdiv( long long a, long long b ) {
     return a * ( pwr( b, mod - 2 ) ) % mod;
 }
- 
- 
  
 struct hasher {
 	string s;
@@ -56,7 +51,6 @@ struct hasher {
 	void calcPref() {
 		ll curHash = 0;
 		for(int i=0; i<n; i++) {	
-			gudPref[i+1] = gudPref[i] + (gud[s[i] - 'a'] == '1');
 			curHash = (curHash + (s[i] - 'a' + 1) * powP[i]) % mod;
 			pref[i] = curHash; 
 		}
